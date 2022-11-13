@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+</head>
+<body>
+    <script>
+let x=["john", "JACOB", "jinGleHeimer", "schmidt"]
+
+
+newx=x.map(capitalizeNames)
+
+
+function capitalizeNames(ele,index){
+
+y=ele.toLowerCase();
+ y=ele.charAt(0).toUpperCase();
+consol.log( y+ele)
+
+
+
+
+
+}
+
+
+    </script>
+</body>
+</html>
+
+function capitalizeWords(arr) {
+    return arr.map(element => {
+      return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
+    });
+  }
+  
+  // 👇️ ['Hello', 'World']
+  console.log(capitalizeWords(['hello', 'world']));
+  
+  // 👇️ ['One', 'Two', 'Three']
+  console.log(capitalizeWords(['one', 'two', 'three']));
+  

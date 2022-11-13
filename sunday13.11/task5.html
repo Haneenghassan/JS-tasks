@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+</head>
+<body>
+    <script>
+    var  arr= [
+    {
+      name: "Angelina Jolie",
+       age: 80
+    },
+   {
+       name: "Eric Jones",
+        age: 2
+    },
+    {
+        name: "Paris Hilton",
+        age: 5
+    },
+    {
+        name: "Kayne West",
+        age: 16
+    },
+    {
+        name: "Bob Ziroll",
+        age: 100
+    }
+    ];
+
+    let newarr=arr.map(findage)
+    
+    function findage(element,index){
+        if (arr[index].age<18){
+        return arr[index].name +="is under age!!"
+        }
+        else{
+            return arr[index].name +="can go to The Matrix" 
+        }
+    }
+
+    console.log(newarr)
+    </script>
+</body>
+</html>
