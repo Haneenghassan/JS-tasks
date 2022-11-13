@@ -4,24 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task3</title>
+    <title>task8</title>
 </head>
 <body>
     <script>
-let x=["john", "JACOB", "jinGleHeimer", "schmidt"]
+       arr=[{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}]
 
+       newarr=arr.map(extractKey)
 
-newx=x.map(capitalizeNames)
+       function extractKey(x){
 
+       return x.name}
 
-function capitalizeNames(ele,index){
-
-
- return ele.charAt(0).toUpperCase()+ele.slice(1).toLowerCase()
-
-}
-console.log(newx);
-
+       console.log(newarr);
     </script>
 </body>
 </html>
