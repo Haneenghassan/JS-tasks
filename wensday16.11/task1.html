@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Form Validation</title>
+   
+
+  
+        
+
+</head>
+
+<body>
+    <h1>Welcome to the best form on Internet!</h1>
+    <form >
+        <div class="formdesign">
+            Name: <input type="text" id="name">
+        </div>
+
+        <div class="formdesign" >
+            Email: <input type="email" id="email">    
+        </div>
+        <div class="formdesign" >
+            Confirm Email: <input type="email" id="cEmail">
+        </div>
+
+        <!-- <div class="formdesign" >
+            Phone: <input type="phone" id="phone">
+        </div> -->
+
+        <div class="formdesign" >
+            Password: <input type="password" id="pass">
+        </div>
+
+        <div class="formdesign" >
+            Confirm Password: <input type="password" id="cpass">
+        </div>
+
+       <button id="button">
+        submit
+       </button>
+
+    </form>
+</body>
+<script>
+let x= document.getElementById("name");
+let y=document.getElementById("email");
+let z=document.getElementById("cEmail");
+let L=document.getElementById("phone");
+let p=document.getElementById("pass");
+let c=document.getElementById("cpass");
+let b=document.getElementById("button");
+
+b.onclick=function (){
+    localStorage.setItem('name', x.value);
+    localStorage.setItem('Email', y.value); 
+    localStorage.setItem('phone', L.value);
+    localStorage.setItem('pass', p.value);
+}
+</script>
+
+</html>

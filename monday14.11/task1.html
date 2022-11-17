@@ -28,17 +28,16 @@
     margin: 4% 3%;
   }
 
-  #container1{border: 2px solid lavender;
+  #container1 {
+    border: 2px solid lavender;
     width: 33%;
     height: 30vh;
     background-color: lavender;
     border-radius: 20%;
     text-align: center;
-    padding: 3%;}
-
-    
+    padding: 3%;
+  }
 </style>
-
 <body>
 
   <form id="container">
@@ -68,28 +67,37 @@
     <br>
 
     <button type="submit" id="input_data">log in</button>
-
-    <script>
+  </form>
+<script>
 
       var n = document.getElementById("name");
       var e = document.getElementById("email");
       var m = document.getElementById("mobile")
       var p = document.getElementById("password");
       var s = document.getElementById("savevalue");
+      let x = []
+
+
 
 
 
       s.onclick = function () {
+        event.preventDefault();
 
 
-        localStorage.setItem('name', n.value);
-        localStorage.setItem('email', e.value)
-        localStorage.setItem('mobile', m.value)
-        localStorage.setItem('password', p.value)
+
+        let users = { 'name': n.value, 'email': e.value, 'mobile': m.value, 'password': p.value }
+        x.push(users);
+        console.log(x,"array of obj");
+        let strig_data=JSON.stringify(x);
+        console.log(typeof(strig_data));
+        localStorage.setItem( 'data',strig_data);
 
 
 
       }
+
+
 
 
       var inputemail = document.getElementById("inputemail");
@@ -97,12 +105,16 @@
       var input_data = document.getElementById("input_data");
 
       input_data.onclick = function () {
+        event.preventDefault();
         if (inputemail.value == e.value && inputpassword.value == p.value) {
+          let parse_data= JSON.parse(localStorage.getItem('data'));
+          console.log(typeof(parse_data));
           document.write('Hello user');
         }
         else {
           document.write('information provided is not match');
         }
+        
       }
 
 
